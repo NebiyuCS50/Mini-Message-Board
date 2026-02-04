@@ -1,0 +1,26 @@
+<div style="display: flex; flex-direction: column; align-items: center; margin-top: 1rem; margin-bottom: 2rem;">
+<h1 style="text-align: center; margin-top: 2rem;"><%=title %></h1>
+<div style="text-align: center; margin-bottom: 2rem;">
+  <a href="/new" style="display: inline-block; background: #4f8cff; color: #fff; padding: 0.7rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.07); transition: background 0.2s;">
+    + Add New Message
+  </a>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 1rem; max-width: 500px; margin: auto;">
+	<% messages.forEach((message, id) => { %>
+		<div style="border: 1px solid #ccc; border-radius: 8px; padding: 1rem; background: #f9f9f9; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+			<div style="font-weight: bold; color: #333; margin-bottom: 0.5rem;">
+				<%= message.user %>
+			</div>
+			<div style="margin-bottom: 0.5rem; color: #555;">
+				<%= message.text %>
+			</div>
+			<div style="font-size: 0.85em; color: #888;">
+				<%= message.added.toLocaleString() %>
+			</div>
+			<div style="text-align: right; margin-top: 0.5rem;">
+			  <a href="/message/<%=id%>" style="background: #27ae60; color: #fff; padding: 0.4rem 1rem; border-radius: 5px; text-decoration: none; font-weight: 500; font-size: 0.98rem; border: 1px solid #27ae60; transition: background 0.2s;">Details</a>
+			</div>
+		</div>
+	<% }); %>
+</div>
