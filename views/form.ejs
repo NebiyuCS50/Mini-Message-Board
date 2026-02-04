@@ -1,0 +1,100 @@
+<div
+  style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: #f5f6fa;
+  "
+>
+  <div
+    style="
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      padding: 2rem 2.5rem;
+      min-width: 340px;
+      max-width: 400px;
+      width: 100%;
+    "
+  >
+    <h1
+      style="
+        text-align: center;
+        margin-bottom: 0.5rem;
+        color: #333;
+        font-size: 2rem;
+      "
+    >
+      New Message
+    </h1>
+    <p
+      style="
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: #888;
+        font-size: 1rem;
+      "
+    >
+      Share your thoughts
+    </p>
+    <form
+      action="/new"
+      method="POST"
+      style="display: flex; flex-direction: column; gap: 1.2rem"
+    >
+      <div style="display: flex; flex-direction: column; gap: 0.3rem">
+        <label for="user" style="font-weight: 500; color: #555">User:</label>
+        <input
+          type="text"
+          id="user"
+          name="user"
+          required
+          style="
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.2s;
+          "
+        />
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 0.3rem">
+        <label for="text" style="font-weight: 500; color: #555">Message:</label>
+        <textarea
+          id="text"
+          name="text"
+          required
+          rows="4"
+          style="
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            resize: vertical;
+            outline: none;
+            transition: border 0.2s;
+          "
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        style="
+          background: #4f8cff;
+          color: #fff;
+          border: none;
+          border-radius: 6px;
+          padding: 0.8rem;
+          font-size: 1.1rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: background 0.2s;
+          margin-top: 0.5rem;
+        "
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
