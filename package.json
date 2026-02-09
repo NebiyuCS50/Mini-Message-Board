@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/NebiyuCS50/Mini-Message-Board#readme",
   "dependencies": {
+    "dotenv": "^17.2.4",
     "ejs": "^4.0.1",
     "express": "^5.2.1"
   },
