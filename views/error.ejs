@@ -1,0 +1,7 @@
+    <% if (locals.errors) {%>
+  <ul style="color: red; margin-top: 1rem; list-style-type: none; padding-left: 0">
+    <% errors.forEach(function(error) { %>
+      <li style="color: red; margin-bottom: 0.5rem;"><%= error.msg %></li>
+    <% }); %>
+  </ul>
+<% } %>
